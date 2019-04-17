@@ -416,6 +416,10 @@ def check_hmc_diagnostics(fit, pars=None, verbose=True, per_chain=False, checks=
     Parameters
     ----------
     fit : StanFit4Model object
+    pars : {str, sequence of str}, optional
+        Parameter (or quantile) name(s). Test only specific parameters
+        for checks "n_eff" and "Rhat". Raises an exception if parameter
+        is not valid.
     verbose : bool or int, optional
         If ``verbose`` is ``False`` or a nonpositive integer, no
         diagnostic messages are printed, and only the return value of
